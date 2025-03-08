@@ -1,9 +1,12 @@
-
-
+import { useNavigate } from "react-router-dom";
 
 
 
 function Login () {
+
+    const navigate = useNavigate()
+
+
 
     return (
         <div className="w-full max-w-md bg-white rounded-lg dark:bg-gray-800">
@@ -29,10 +32,15 @@ function Login () {
                             <div className="flex items-center justify-between mt-4">
                                 <a href="#" className="text-sm text-gray-600 dark:text-gray-200 hover:underline">Forget Password?</a>
 
-                                <button className="px-6 py-2 font-medium text-white transition-colors duration-300 transform bg-gray-900 rounded-md hover:bg-gray-800 dark:hover:bg-gray-700 focus:outline-none focus:bg-gray-800 dark:focus:bg-gray-700">Sign In</button>
+                                <button
+                                 className="px-6 py-2 font-medium text-white transition-colors duration-300 transform bg-gray-900 rounded-md hover:bg-gray-800 dark:hover:bg-gray-700 focus:outline-none focus:bg-gray-800 dark:focus:bg-gray-700"
+                                 onClick={() => navigate('/main')}
+                                 >Sign In</button>
                             </div>
                             </form>
                         </div>
                         </div>
     )
 }
+
+export default Login;
