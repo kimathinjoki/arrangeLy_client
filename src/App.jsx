@@ -44,7 +44,7 @@ import { authService } from './api/rubyBackendService';
 import GuestSurveyResponse from "./components/main/guests/GuestSurveyResponse";
 
 function App() {
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [isAuthenticated, setIsAuthenticated] = useState(true);
   const [isLoading, setIsLoading] = useState(true);
   
   useEffect(() => {
@@ -83,9 +83,10 @@ function App() {
         <Route 
           path="/main" 
           element={
-            <PrivateRoute isAuthenticated={isAuthenticated}>
-              <Main />
-            </PrivateRoute>
+            //<PrivateRoute isAuthenticated={isAuthenticated}>
+            //   <Main />
+            // </PrivateRoute> 
+            <Main/>
           }
         >
           {/* Dashboard */}

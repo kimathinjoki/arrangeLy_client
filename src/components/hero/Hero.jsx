@@ -15,13 +15,13 @@ function Hero () {
 
                     <div className="flex flex-col items-center py-6 lg:h-screen lg:flex-row">
                     <div className="lg:w-1/2">
-                        <h1 className="text-3xl font-semibold text-red-100 lg:text-4xl">Arrange.<span className="text-red-800">ly</span></h1>
+                        <h1 className="text-3xl font-semibold text-red-800 lg:text-4xl">Arrange.<span className="text-green-800">ly</span></h1>
 
-                        <h3 className="mt-2 text-2xl font-semibold text-gray-100">
+                        <h3 className="mt-2 text-2xl font-semibold text-gray-400">
                         Perfect Seating,  <span className="text-gray-900 text-with-shadow"> Perfect Celebration</span>
                         </h3>
 
-                        <p className="mt-4 text-2xl font-bold text-black text-with-shadow">Sit Back and Let Science Seat Your Guests. Blend family dynamics, friendships, and social preferences into a seating chart everyone will love.</p>
+                        <p className="mt-4 text-2xl font-bold text-red-900 text-with-shadow">Sit Back and Let Science Seat Your Guests. Blend family dynamics, friendships, and social preferences into a seating chart everyone will love.</p>
                     </div>
 
                     <div className="flex mt-8 lg:w-1/2 lg:justify-end lg:mt-0">
