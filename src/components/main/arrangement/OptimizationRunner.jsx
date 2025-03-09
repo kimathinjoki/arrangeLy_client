@@ -469,8 +469,8 @@ function OptimizationRunner() {
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 mx-auto mb-3 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
                 </svg>
-                <p className="mb-2">No optimization has been run yet.</p>
-                <p>Adjust your settings and click "Run Seating Optimization" to begin.</p>
+                <p className="mb-2 text-gray-700">No optimization has been run yet.</p>
+                <p className='text-gray-700'>Adjust your settings and click "Run Seating Optimization" to begin.</p>
               </div>
             ) : optimizationStatus.status === 'running' ? (
               <div>
@@ -511,19 +511,19 @@ function OptimizationRunner() {
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-4">
                   <div className="bg-blue-50 p-3 rounded-lg">
                     <p className="text-xs text-blue-600">Guest Satisfaction</p>
-                    <p className="text-xl font-bold">{optimizationResults.metrics.satisfactionScore}%</p>
+                    <p className="text-xl text-gray-700 font-bold">{optimizationResults.metrics.satisfactionScore}%</p>
                   </div>
                   <div className="bg-green-50 p-3 rounded-lg">
                     <p className="text-xs text-green-600">Conflict Resolution</p>
-                    <p className="text-xl font-bold">{optimizationResults.metrics.conflictScore}%</p>
+                    <p className="text-xl text-gray-700 font-bold">{optimizationResults.metrics.conflictScore}%</p>
                   </div>
                   <div className="bg-purple-50 p-3 rounded-lg">
                     <p className="text-xs text-purple-600">Table Balance</p>
-                    <p className="text-xl font-bold">{optimizationResults.metrics.balanceScore}%</p>
+                    <p className="text-xl text-gray-700 font-bold">{optimizationResults.metrics.balanceScore}%</p>
                   </div>
                   <div className="bg-gray-50 p-3 rounded-lg">
                     <p className="text-xs text-gray-600">Overall Score</p>
-                    <p className="text-xl font-bold">{optimizationResults.metrics.overallScore}%</p>
+                    <p className="text-xl text-gray-700 font-bold">{optimizationResults.metrics.overallScore}%</p>
                   </div>
                 </div>
               </div>
@@ -560,7 +560,7 @@ function OptimizationRunner() {
                   {optimizationResults.arrangements.map((arrangement) => (
                     <div key={arrangement.id} className="border rounded-lg overflow-hidden">
                       <div className="flex justify-between items-center bg-gray-50 px-4 py-3 border-b">
-                        <h3 className="font-medium">{arrangement.name}</h3>
+                        <h3 className="font-medium text-gray-700">{arrangement.name}</h3>
                         <div className="flex items-center space-x-2">
                           <span className="text-sm text-gray-500">Score: {arrangement.metrics.overallScore}%</span>
                           <button
@@ -577,13 +577,13 @@ function OptimizationRunner() {
                           {arrangement.tables.slice(0, 6).map((table) => (
                             <div key={table.id} className="border rounded p-3">
                               <div className="flex justify-between items-center mb-2">
-                                <h4 className="font-medium">{table.name}</h4>
+                                <h4 className="font-medium text-gray-700">{table.name}</h4>
                                 <span className="text-xs text-gray-500">{table.guests.length}/{table.capacity} seats</span>
                               </div>
-                              <ul className="text-sm">
+                              <ul className="text-sm ">
                                 {table.guests.slice(0, 4).map((guest, idx) => (
                                   <li key={idx} className="mb-1 flex justify-between">
-                                    <span>{guest.name}</span>
+                                    <span className='text-gray-700'>{guest.name}</span>
                                     {guest.dietaryNeeds.length > 0 && (
                                       <span className="text-xs bg-yellow-100 text-yellow-800 px-1 rounded">
                                         {guest.dietaryNeeds[0]}
