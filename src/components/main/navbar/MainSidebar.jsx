@@ -17,7 +17,7 @@ import {
   AiOutlineLogout
 } from "react-icons/ai";
 
-import { authService } from "../api/rubyBackendService";
+import { authService } from "../../../api/rubyBackendService";
 
 function MainSidebar() {
   const location = useLocation();

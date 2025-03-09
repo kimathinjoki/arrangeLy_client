@@ -40,7 +40,7 @@ function Hero () {
                 {/* Pattern style */}
                 <style jsx>{`
                     .pattern {
-                        background-image: url("https://images.pexels.com/photos/1580622/pexels-photo-1580622.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+                        background-image: url("https://images-ext-1.discordapp.net/external/WL9Sc8epwfm50S9Ts66RnggTZzlNpdDQ5PtxFM95DXQ/https/www.theweddingsecret.co.uk/img/uploads/businessgallery-webp/5a5f18bd19959_image14.jpg.webp?format=webp&width=2000&height=1280");
                         background-size: cover;
                         background-position: center;
                         background-repeat: no-repeat;
