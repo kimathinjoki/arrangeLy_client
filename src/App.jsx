@@ -4,7 +4,7 @@ import Hero from './components/hero/Hero'
 import Login from './components/auth/Login'
 import {Route, Routes} from 'react-router-dom'
 import Signup from './components/auth/Signup'
-import Main from './components/main/Main'
+import Main from './components/main/layout/Main'
 import Dashboard from './components/main/Dashboard'
 
 function App() {

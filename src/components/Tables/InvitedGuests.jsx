@@ -3,6 +3,7 @@
 function InvitedGuests () {
     
     return (
-        
+        <>
+        </>
     )
 }
