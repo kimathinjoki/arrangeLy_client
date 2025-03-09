@@ -449,11 +449,11 @@ function ArrangementComparison() {
 
   return (
     <div className="container mx-auto">
-      <h1 className="text-2xl font-bold mb-6">Compare Arrangements</h1>
+      <h1 className="text-2xl text-gray-600 font-bold mb-6">Compare Arrangements</h1>
       
       <div className="bg-white p-6 rounded-lg shadow-md mb-6">
         <div className="flex justify-between items-center mb-6">
-          <h2 className="text-lg font-semibold">Seating Arrangements</h2>
+          <h2 className="text-lg text-gray-700 font-semibold">Seating Arrangements</h2>
           <div className="flex space-x-2">
             <div className="relative">
               <button className="bg-gray-200 text-gray-800 py-2 px-4 rounded hover:bg-gray-300 inline-flex items-center">
@@ -495,7 +495,7 @@ function ArrangementComparison() {
           {arrangements.map(arrangement => (
             <div 
               key={arrangement.id} 
-              className={`border rounded-lg p-4 cursor-pointer ${
+              className={`border rounded-lg p-4 text-gray-700 cursor-pointer ${
                 selectedArrangements.includes(arrangement.id) 
                   ? 'border-blue-500 bg-blue-50' 
                   : 'hover:bg-gray-50'
@@ -503,7 +503,7 @@ function ArrangementComparison() {
               onClick={() => handleSelectArrangement(arrangement.id)}
             >
               <div className="flex justify-between items-start mb-3">
-                <h3 className="font-medium">
+                <h3 className="font-medium text-gray-700">
                   {arrangement.name}
                 </h3>
                 {getStatusBadge(arrangement.status)}
@@ -516,7 +516,7 @@ function ArrangementComparison() {
               </p>
               <div className="flex justify-between items-center">
                 <div className="flex items-center text-sm">
-                  <span className="mr-1">Score:</span>
+                  <span className="mr-1 text-gray-700">Score:</span>
                   <span className="font-medium">{arrangement.metrics.overallScore}%</span>
                 </div>
                 {arrangement.status !== 'current' && (
@@ -575,7 +575,7 @@ function ArrangementComparison() {
         {viewMode === 'tables' && renderTableComparison()}
         
         {viewMode === 'metrics' && (
-          <div className="space-y-8">
+          <div className="space-y-8 text-gray-700">
             {arrangements
               .filter(arr => selectedArrangements.includes(arr.id))
               .map(arrangement => (
@@ -591,11 +591,11 @@ function ArrangementComparison() {
       </div>
       
       <div className="bg-white p-6 rounded-lg shadow-md">
-        <h2 className="text-lg font-semibold mb-4">Arrangement Analytics</h2>
+        <h2 className="text-lg text-gray-700 font-semibold mb-4">Arrangement Analytics</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="border rounded-lg p-4">
-            <h3 className="font-medium mb-3">Family Group Distribution</h3>
+            <h3 className="font-medium text-gray-700 mb-3">Family Group Distribution</h3>
             <div className="h-64 bg-gray-100 rounded-lg flex items-center justify-center">
               <p className="text-gray-500">Family distribution chart</p>
             </div>

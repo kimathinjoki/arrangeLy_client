@@ -255,13 +255,13 @@ function OptimizationRunner() {
 
   return (
     <div className="container mx-auto">
-      <h1 className="text-2xl font-bold mb-6">Seating Optimization</h1>
+      <h1 className="text-2xl text-gray-500 font-bold mb-6">Seating Optimization</h1>
       
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Configuration Panel */}
         <div className="lg:col-span-1">
           <div className="bg-white p-6 rounded-lg shadow-md">
-            <h2 className="text-lg font-semibold mb-4">Optimization Settings</h2>
+            <h2 className="text-lg  text-gray-700 font-semibold mb-4">Optimization Settings</h2>
             
             <div className="space-y-4">
               <div>
@@ -269,7 +269,7 @@ function OptimizationRunner() {
                 <input
                   type="number"
                   name="numberOfTables"
-                  className="w-full p-2 border rounded"
+                  className="w-full p-2 text-gray-700 border rounded"
                   value={optimizationConfig.numberOfTables}
                   onChange={handleConfigChange}
                   min="1"
@@ -282,7 +282,7 @@ function OptimizationRunner() {
                 <input
                   type="number"
                   name="seatsPerTable"
-                  className="w-full p-2 border rounded"
+                  className="w-full p-2 text-gray-700 border rounded"
                   value={optimizationConfig.seatsPerTable}
                   onChange={handleConfigChange}
                   min="4"
@@ -291,7 +291,7 @@ function OptimizationRunner() {
               </div>
               
               <div className="border-t pt-4">
-                <h3 className="font-medium mb-2">Optimization Priorities</h3>
+                <h3 className="font-medium  text-gray-700 mb-2">Optimization Priorities</h3>
                 
                 <div className="space-y-2">
                   <div className="flex items-center">
@@ -367,7 +367,7 @@ function OptimizationRunner() {
               </div>
               
               <div className="border-t pt-4">
-                <h3 className="font-medium mb-2">Special Tables</h3>
+                <h3 className="font-medium text-gray-700 mb-2">Special Tables</h3>
                 
                 <div className="flex items-center mb-2">
                   <input
@@ -389,7 +389,7 @@ function OptimizationRunner() {
                     <input
                       type="number"
                       name="specialTableCount"
-                      className="w-full p-2 border rounded"
+                      className="w-full p-2 text-gray-700 border rounded"
                       value={optimizationConfig.specialTableCount}
                       onChange={handleConfigChange}
                       min="1"
@@ -400,7 +400,7 @@ function OptimizationRunner() {
               </div>
               
               <div className="border-t pt-4">
-                <h3 className="font-medium mb-2">Advanced Settings</h3>
+                <h3 className="font-medium text-gray-700 mb-2">Advanced Settings</h3>
                 
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">
@@ -412,7 +412,7 @@ function OptimizationRunner() {
                     min="0"
                     max="1"
                     step="0.1"
-                    className="w-full"
+                    className="w-full text-gray-700"
                     value={optimizationConfig.optimizationStrength}
                     onChange={(e) => setOptimizationConfig({
                       ...optimizationConfig,
@@ -426,13 +426,13 @@ function OptimizationRunner() {
                 </div>
                 
                 <div className="mt-3">
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
+                  <label className="block text-sm text-gray-700 font-medium text-gray-700 mb-1">
                     Maximum Run Time (seconds)
                   </label>
                   <input
                     type="number"
                     name="maxRunTime"
-                    className="w-full p-2 border rounded"
+                    className="w-full text-gray-700 p-2 border rounded"
                     value={optimizationConfig.maxRunTime}
                     onChange={handleConfigChange}
                     min="10"
@@ -445,7 +445,7 @@ function OptimizationRunner() {
                 <button
                   onClick={startOptimization}
                   disabled={optimizationStatus.running}
-                  className={`w-full py-2 px-4 rounded font-medium ${
+                  className={`w-full py-2 px-4 rounded text-gray-700 font-medium ${
                     optimizationStatus.running
                       ? 'bg-gray-300 cursor-not-allowed'
                       : 'bg-green-600 hover:bg-green-700 text-white'
@@ -462,7 +462,7 @@ function OptimizationRunner() {
         <div className="lg:col-span-2">
           {/* Optimization Status Panel */}
           <div className="bg-white p-6 rounded-lg shadow-md mb-6">
-            <h2 className="text-lg font-semibold mb-4">Optimization Status</h2>
+            <h2 className="text-lg text-gray-700 font-semibold mb-4">Optimization Status</h2>
             
             {optimizationStatus.status === 'idle' ? (
               <div className="text-center py-6 text-gray-500">
@@ -548,7 +548,7 @@ function OptimizationRunner() {
           {/* Optimization Results */}
           {optimizationStatus.status === 'complete' && (
             <div className="bg-white p-6 rounded-lg shadow-md">
-              <h2 className="text-lg font-semibold mb-4">Generated Seating Arrangements</h2>
+              <h2 className="text-lg text-gray-700 font-semibold mb-4">Generated Seating Arrangements</h2>
               
               <div className="mb-6">
                 <p className="text-sm text-gray-600 mb-4">

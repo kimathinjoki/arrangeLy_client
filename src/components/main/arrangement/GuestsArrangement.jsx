@@ -143,7 +143,7 @@ function GuestsArrangement() {
               </button>
             </div>
             
-            <div className="mb-4">
+            <div className="mb- text-gray-700">
               <div className="flex gap-2 mb-2">
                 <input
                   type="text"
@@ -174,7 +174,7 @@ function GuestsArrangement() {
                     onClick={() => setSelectedGuest(guest.id)}
                   >
                     <div>
-                      <p className="font-medium">{guest.name}</p>
+                      <p className="font-medium text-gray-700">{guest.name}</p>
                       <p className="text-sm text-gray-500">{guest.relationship}</p>
                       {guest.dietaryRestrictions !== 'None' && (
                         <span className="inline-block bg-yellow-100 text-yellow-800 text-xs px-2 py-0.5 rounded-full mt-1">
@@ -206,7 +206,7 @@ function GuestsArrangement() {
         <div className="w-full lg:w-2/3">
           <div className="bg-white p-6 rounded-lg shadow-md">
             <div className="flex justify-between items-center mb-4">
-              <h2 className="text-lg font-semibold">Tables</h2>
+              <h2 className="text-lg text-gray-700 font-semibold">Tables</h2>
               <button 
                 onClick={clearAllTables}
                 className="bg-red-600 hover:bg-red-700 text-white text-sm py-1 px-3 rounded"
@@ -219,23 +219,23 @@ function GuestsArrangement() {
               {tables.map(table => (
                 <div 
                   key={table.id} 
-                  className={`border rounded-lg p-4 ${selectedTable === table.id ? 'border-blue-500 ring-2 ring-blue-200' : 'border-gray-200'}`}
+                  className={`border text-gray-700 rounded-lg p-4 ${selectedTable === table.id ? 'border-blue-500 ring-2 ring-blue-200' : 'border-gray-200'}`}
                   onClick={() => setSelectedTable(table.id)}
                 >
                   <div className="flex justify-between items-center mb-3">
-                    <h3 className="font-medium">{table.name}</h3>
+                    <h3 className="text-gray-700 font-medium">{table.name}</h3>
                     <span className={`text-sm ${table.guests.length === table.capacity ? 'text-red-500' : 'text-gray-500'}`}>
                       {table.guests.length}/{table.capacity} seats
                     </span>
                   </div>
                   
-                  <div className="overflow-y-auto max-h-40">
+                  <div className="overflow-y-auto text-gray-700 max-h-40">
                     {table.guests.length > 0 ? (
                       <ul className="divide-y divide-gray-200">
                         {table.guests.map(guest => (
                           <li key={guest.id} className="py-2 flex justify-between items-center">
                             <div>
-                              <p className="text-sm font-medium">{guest.name}</p>
+                              <p className="text-sm text-gray-700 font-medium">{guest.name}</p>
                               <div className="flex gap-1 mt-1">
                                 <span className="inline-block bg-gray-100 text-gray-800 text-xs px-2 py-0.5 rounded-full">
                                   {guest.relationship}

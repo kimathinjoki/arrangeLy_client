@@ -42,6 +42,7 @@ import Settings from "./components/main/settings/Settings";
 // Services
 import { authService } from './api/rubyBackendService';
 import GuestSurveyResponse from "./components/main/guests/GuestSurveyResponse";
+import CreateEvent from "./components/main/event/CreateEvent";
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(true);
@@ -91,6 +92,8 @@ function App() {
         >
           {/* Dashboard */}
           <Route index element={<Home />} />
+
+          <Route path="create-event" element={<CreateEvent />} /> 
           
           {/* Guest Management */}
           <Route path="guests">

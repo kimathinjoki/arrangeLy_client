@@ -35,7 +35,7 @@ function MainSidebar() {
 
   return (
     <>
-      <aside className="flex flex-col w-64 h-screen px-5 py-8 overflow-y-auto bg-white border-r rtl:border-r-0 rtl:border-l dark:bg-gray-900 dark:border-gray-700">
+      <aside className="flex flex-col w-64 h-screen px-5 py-8 overflow-y-auto bg-white border-r rtl:border-r-0 rtl:border-l dark:bg-gray-900 dark:border-gray-700 fixed">
         <Link to="/main" className="flex items-center gap-2">
           <CgArrangeBack className="w-auto h-6 sm:h-7 text-red-800" />
           <span className="text-xl font-semibold">Arrange.ly</span>
