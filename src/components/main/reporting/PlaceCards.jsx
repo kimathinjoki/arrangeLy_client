@@ -288,7 +288,7 @@ function PlaceCards() {
   
   return (
     <div className="container mx-auto">
-      <h1 className="text-2xl font-bold mb-6">Place Cards Generator</h1>
+      <h1 className="text-2xl text-gray-700 font-bold mb-6">Place Cards Generator</h1>
       
       {error && (
         <div className="mb-6 bg-red-50 border-l-4 border-red-500 p-4">
@@ -309,7 +309,7 @@ function PlaceCards() {
         {/* Card Settings Panel - 2 columns */}
         <div className="lg:col-span-2">
           <div className="bg-white rounded-lg shadow-md p-6 mb-6">
-            <h2 className="text-lg font-medium mb-4">Card Settings</h2>
+            <h2 className="text-lg text-gray-700 font-medium mb-4">Card Settings</h2>
             
             {/* Arrangement Selection */}
             <div className="mb-4">
@@ -318,7 +318,7 @@ function PlaceCards() {
               </label>
               <select
                 id="arrangement"
-                className="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm rounded-md"
+                className="mt-1 block w-full pl-3 pr-10 py-2 text-base text-gray-700 border-gray-300 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm rounded-md"
                 value={selectedArrangement}
                 onChange={(e) => setSelectedArrangement(e.target.value)}
               >
@@ -338,7 +338,7 @@ function PlaceCards() {
               </label>
               <div className="grid grid-cols-3 gap-3">
                 <div 
-                  className={`border rounded-lg p-3 text-center cursor-pointer ${
+                  className={`border rounded-lg p-3 text-gray-700 text-center cursor-pointer ${
                     cardSettings.cardType === 'tent' ? 'border-blue-500 bg-blue-50' : 'hover:bg-gray-50'
                   }`}
                   onClick={() => updateCardSettings('cardType', 'tent')}
@@ -346,7 +346,7 @@ function PlaceCards() {
                   <div className="mx-auto h-12 w-20 bg-gray-200 mb-2 flex items-end justify-center rounded transform rotate-12 origin-bottom">
                     <div className="w-full h-6 bg-white rounded-t"></div>
                   </div>
-                  <span className="text-sm">Tent Fold</span>
+                  <span className="text-sm text-gray-700">Tent Fold</span>
                 </div>
                 <div 
                   className={`border rounded-lg p-3 text-center cursor-pointer ${
@@ -357,7 +357,7 @@ function PlaceCards() {
                   <div className="mx-auto h-12 w-20 bg-white border-2 border-gray-200 mb-2 flex items-center justify-center rounded">
                     <div className="w-16 h-8 bg-gray-200 rounded"></div>
                   </div>
-                  <span className="text-sm">Flat</span>
+                  <span className="text-sm text-gray-700">Flat</span>
                 </div>
                 <div 
                   className={`border rounded-lg p-3 text-center cursor-pointer ${
@@ -368,7 +368,7 @@ function PlaceCards() {
                   <div className="mx-auto h-12 w-20 bg-white border-2 border-gray-200 mb-2 flex items-center justify-center rounded">
                     <div className="w-1 h-10 bg-gray-300 rounded mx-auto"></div>
                   </div>
-                  <span className="text-sm">Folded</span>
+                  <span className="text-sm text-gray-700">Folded</span>
                 </div>
               </div>
             </div>
@@ -382,7 +382,7 @@ function PlaceCards() {
                 {['elegant', 'modern', 'rustic'].map(style => (
                   <div 
                     key={style}
-                    className={`border rounded-lg p-3 text-center cursor-pointer ${
+                    className={`border  text-gray-700 rounded-lg p-3 text-center cursor-pointer ${
                       cardSettings.templateStyle === style ? 'border-blue-500 bg-blue-50' : 'hover:bg-gray-50'
                     }`}
                     onClick={() => updateCardSettings('templateStyle', style)}
@@ -400,7 +400,7 @@ function PlaceCards() {
               </label>
               <div className="grid grid-cols-2 gap-3">
                 <div 
-                  className={`border rounded-lg p-3 text-center cursor-pointer ${
+                  className={`border rounded-lg p-3 text-gray-700 text-center cursor-pointer ${
                     cardSettings.orientation === 'horizontal' ? 'border-blue-500 bg-blue-50' : 'hover:bg-gray-50'
                   }`}
                   onClick={() => updateCardSettings('orientation', 'horizontal')}
@@ -408,10 +408,10 @@ function PlaceCards() {
                   <div className="mx-auto h-8 w-16 bg-gray-200 mb-2 flex items-center justify-center rounded">
                     <div className="w-12 h-4 bg-white rounded"></div>
                   </div>
-                  <span className="text-sm">Landscape</span>
+                  <span className="text-sm text-gray-700">Landscape</span>
                 </div>
                 <div 
-                  className={`border rounded-lg p-3 text-center cursor-pointer ${
+                  className={`border rounded-lg p-3 text-gray-700 text-center cursor-pointer ${
                     cardSettings.orientation === 'vertical' ? 'border-blue-500 bg-blue-50' : 'hover:bg-gray-50'
                   }`}
                   onClick={() => updateCardSettings('orientation', 'vertical')}
@@ -419,14 +419,14 @@ function PlaceCards() {
                   <div className="mx-auto h-16 w-8 bg-gray-200 mb-2 flex items-center justify-center rounded">
                     <div className="w-4 h-12 bg-white rounded"></div>
                   </div>
-                  <span className="text-sm">Portrait</span>
+                  <span className="text-sm text-gray-700">Portrait</span>
                 </div>
               </div>
             </div>
             
             {/* Content Options */}
             <div className="border-t pt-4 mt-4">
-              <h3 className="font-medium text-sm mb-3">Content Options</h3>
+              <h3 className="font-medium text-gray-700 text-sm mb-3">Content Options</h3>
               
               <div className="space-y-3">
                 {/* Include Table Number */}
@@ -434,7 +434,7 @@ function PlaceCards() {
                   <input
                     id="includeTableNumber"
                     type="checkbox"
-                    className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+                    className="h-4 w-4 text-blue-600 focus:ring-blue-500 text-gray-700 border-gray-300 rounded"
                     checked={cardSettings.includeTableNumber}
                     onChange={(e) => updateCardSettings('includeTableNumber', e.target.checked)}
                   />
@@ -449,7 +449,7 @@ function PlaceCards() {
                     <input
                       id="includeEventName"
                       type="checkbox"
-                      className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+                      className="h-4 w-4 text-blue-600 focus:ring-blue-500 text-gray-700 border-gray-300 rounded"
                       checked={cardSettings.includeEventName}
                       onChange={(e) => updateCardSettings('includeEventName', e.target.checked)}
                     />
@@ -461,7 +461,7 @@ function PlaceCards() {
                   {cardSettings.includeEventName && (
                     <input
                       type="text"
-                      className="mt-2 w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                      className="mt-2 w-full px-3 py-2 borde text-gray-700 r border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
                       value={cardSettings.eventName}
                       onChange={(e) => updateCardSettings('eventName', e.target.value)}
                     />
@@ -486,7 +486,7 @@ function PlaceCards() {
                   {cardSettings.includeDate && (
                     <input
                       type="date"
-                      className="mt-2 w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                      className="mt-2 w-full px-3 py-2 border text-gray-700 border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
                       value={cardSettings.eventDate}
                       onChange={(e) => updateCardSettings('eventDate', e.target.value)}
                     />
@@ -499,7 +499,7 @@ function PlaceCards() {
                     <input
                       id="addPersonalMessage"
                       type="checkbox"
-                      className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+                      className="h-4 w-4 text-blue-600  focus:ring-blue-500 border-gray-300 rounded"
                       checked={cardSettings.addPersonalMessage}
                       onChange={(e) => updateCardSettings('addPersonalMessage', e.target.checked)}
                     />
@@ -527,7 +527,7 @@ function PlaceCards() {
                 type="button"
                 onClick={handleGeneratePreview}
                 disabled={generating || !selectedArrangement || getSelectedCount() === 0}
-                className={`flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white ${
+                className={`flex items-center text-gray-700 justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white ${
                   generating || !selectedArrangement || getSelectedCount() === 0
                     ? 'bg-gray-300 cursor-not-allowed'
                     : 'bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500'
@@ -573,35 +573,35 @@ function PlaceCards() {
           
           {/* Printing Tips */}
           <div className="bg-white rounded-lg shadow-md p-6">
-            <h2 className="text-lg font-medium mb-4">Printing Tips</h2>
+            <h2 className="text-lg text-gray-700 font-medium mb-4">Printing Tips</h2>
             
             <div className="space-y-2">
               <div className="flex items-start">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-blue-500 mr-2 mt-0.5 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
-                <span className="text-sm">Use high-quality cardstock (65-110lb) for professional results</span>
+                <span className="text-sm text-gray-700">Use high-quality cardstock (65-110lb) for professional results</span>
               </div>
               
               <div className="flex items-start">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-blue-500 mr-2 mt-0.5 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
-                <span className="text-sm">Print a test page on regular paper first to check alignment</span>
+                <span className="text-sm text-gray-700">Print a test page on regular paper first to check alignment</span>
               </div>
               
               <div className="flex items-start">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-blue-500 mr-2 mt-0.5 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
-                <span className="text-sm">For tent cards, score along fold lines before folding</span>
+                <span className="text-sm text-gray-700">For tent cards, score along fold lines before folding</span>
               </div>
               
               <div className="flex items-start">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-blue-500 mr-2 mt-0.5 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
-                <span className="text-sm">Print extra cards in case of mistakes or last-minute changes</span>
+                <span className="text-sm text-gray-700">Print extra cards in case of mistakes or last-minute changes</span>
               </div>
             </div>
           </div>
@@ -611,12 +611,12 @@ function PlaceCards() {
         <div className="lg:col-span-3">
           <div className="bg-white rounded-lg shadow-md p-6">
             <div className="flex justify-between items-center mb-4">
-              <h2 className="text-lg font-medium">Select Recipients</h2>
+              <h2 className="text-lg font-medium text-gray-700">Select Recipients</h2>
               <div className="flex space-x-2">
                 <button
                   type="button"
                   onClick={() => setCurrentSelectionMode('guests')}
-                  className={`px-3 py-1 text-sm font-medium rounded-md ${
+                  className={`px-3 py-1 text-gray-700 text-sm font-medium rounded-md ${
                     currentSelectionMode === 'guests'
                       ? 'bg-blue-100 text-blue-800'
                       : 'bg-gray-100 text-gray-800 hover:bg-gray-200'
@@ -627,7 +627,7 @@ function PlaceCards() {
                 <button
                   type="button"
                   onClick={() => setCurrentSelectionMode('tables')}
-                  className={`px-3 py-1 text-sm font-medium rounded-md ${
+                  className={`px-3 py-1 text-sm text-gray-700 font-medium rounded-md ${
                     currentSelectionMode === 'tables'
                       ? 'bg-blue-100 text-blue-800'
                       : 'bg-gray-100 text-gray-800 hover:bg-gray-200'
@@ -651,7 +651,7 @@ function PlaceCards() {
                       </div>
                       <input
                         type="text"
-                        className="focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 pr-3 py-2 border-gray-300 rounded-md text-sm"
+                        className="focus:ring-blue-500 text-gray-700 focus:border-blue-500 block w-full pl-10 pr-3 py-2 border-gray-300 rounded-md text-sm"
                         placeholder="Search guests..."
                         value={searchTerm}
                         onChange={(e) => setSearchTerm(e.target.value)}
@@ -659,7 +659,7 @@ function PlaceCards() {
                     </div>
                     
                     <select
-                      className="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm rounded-md"
+                      className="mt-1 block text-gray-700 w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm rounded-md"
                       value={filterByTable}
                       onChange={(e) => setFilterByTable(e.target.value)}
                     >
@@ -746,7 +746,7 @@ function PlaceCards() {
                     <input
                       id="select-all-tables"
                       type="checkbox"
-                      className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
+                      className="h-4 w-4 text-blue-600 text-gray-700 focus:ring-blue-500 border-gray-300 rounded"
                       checked={selectedTables.length === tables.length && tables.length > 0}
                       onChange={handleSelectAllTables}
                     />
@@ -806,7 +806,7 @@ function PlaceCards() {
             
             {/* Preview Area */}
             <div className="mt-6 border-t pt-6">
-              <h3 className="font-medium mb-4">Card Preview</h3>
+              <h3 className="font-medium text-gray-700 mb-4">Card Preview</h3>
               
               <div className="border-2 border-dashed border-gray-300 rounded-lg p-12 bg-gray-50 flex flex-col items-center justify-center">
                 {previewData ? (
@@ -876,7 +876,7 @@ function PlaceCards() {
               <div className="mt-5 sm:mt-6 sm:grid sm:grid-cols-2 sm:gap-3 sm:grid-flow-row-dense">
                 <button
                   type="button"
-                  className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-blue-600 text-base font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:col-start-2 sm:text-sm"
+                  className="w-full inline-flex text-gray-700 justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-blue-600 text-base font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 sm:col-start-2 sm:text-sm"
                   onClick={handleGeneratePDF}
                 >
                   Generate PDF

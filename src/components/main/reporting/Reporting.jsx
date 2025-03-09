@@ -130,14 +130,14 @@ function Reporting() {
               </div>
               
               <div className="bg-white p-6 rounded-lg shadow">
-                <h4 className="text-md font-medium mb-4">Guests by Dietary Restrictions</h4>
+                <h4 className="text-md font-medium text-gray-700 mb-4">Guests by Dietary Restrictions</h4>
                 <div className="space-y-4">
                   <div className="flex items-center">
                     <div className="w-1/3">
                       <span className="text-sm text-gray-600">None</span>
                     </div>
                     <div className="w-2/3">
-                      <div className="overflow-hidden h-2 text-xs flex rounded bg-gray-200">
+                      <div className="overflow-hidden h-2 text-xs text-gray-700 flex rounded bg-gray-200">
                         <div style={{ width: `${(guestData.byDietaryRestrictions.none / guestData.total) * 100}%` }} className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-gray-500"></div>
                       </div>
                       <div className="flex justify-between text-xs text-gray-600 mt-1">
@@ -215,31 +215,31 @@ function Reporting() {
       case 'seatingArrangement':
         return (
           <div>
-            <h3 className="text-lg font-medium mb-4">Seating Arrangement Report</h3>
+            <h3 className="text-lg text-gray-700 font-medium mb-4">Seating Arrangement Report</h3>
             
             <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
               <div className="bg-white p-4 rounded-lg shadow">
                 <p className="text-sm text-gray-500">Total Tables</p>
-                <p className="text-2xl font-bold">{seatingData.totalTables}</p>
+                <p className="text-2xl text-gray-700 font-bold">{seatingData.totalTables}</p>
               </div>
               <div className="bg-white p-4 rounded-lg shadow">
                 <p className="text-sm text-gray-500">Total Seats</p>
-                <p className="text-2xl font-bold">{seatingData.totalSeats}</p>
+                <p className="text-2xl  font-bold">{seatingData.totalSeats}</p>
               </div>
               <div className="bg-white p-4 rounded-lg shadow">
                 <p className="text-sm text-gray-500">Seats Assigned</p>
-                <p className="text-2xl font-bold">{seatingData.seatsAssigned}</p>
+                <p className="text-2xl text-gray-700 font-bold">{seatingData.seatsAssigned}</p>
                 <p className="text-xs text-gray-500">{Math.round((seatingData.seatsAssigned / seatingData.totalSeats) * 100)}%</p>
               </div>
               <div className="bg-white p-4 rounded-lg shadow">
                 <p className="text-sm text-gray-500">Unassigned Seats</p>
-                <p className="text-2xl font-bold">{seatingData.seatsUnassigned}</p>
+                <p className="text-2xl text-gray-700 font-bold">{seatingData.seatsUnassigned}</p>
                 <p className="text-xs text-gray-500">{Math.round((seatingData.seatsUnassigned / seatingData.totalSeats) * 100)}%</p>
               </div>
             </div>
             
             <div className="bg-white p-6 rounded-lg shadow mb-6">
-              <h4 className="text-md font-medium mb-4">Seating Progress</h4>
+              <h4 className="text-md text-gray-700 font-medium mb-4">Seating Progress</h4>
               <div className="w-full bg-gray-200 rounded-full h-4">
                 <div className="bg-blue-600 h-4 rounded-full" style={{ width: `${(seatingData.guestsAssigned / seatingData.totalGuests) * 100}%` }}></div>
               </div>
@@ -250,7 +250,7 @@ function Reporting() {
             </div>
             
             <div className="bg-white p-6 rounded-lg shadow">
-              <h4 className="text-md font-medium mb-4">Table Assignment Status</h4>
+              <h4 className="text-md text-gray-700 font-medium mb-4">Table Assignment Status</h4>
               <div className="overflow-x-auto">
                 <table className="min-w-full divide-y divide-gray-200">
                   <thead className="bg-gray-50">
@@ -303,7 +303,7 @@ function Reporting() {
       case 'budgetTracking':
         return (
           <div>
-            <h3 className="text-lg font-medium mb-4">Budget Tracking Report</h3>
+            <h3 className="text-lg text-gray-700 font-medium mb-4">Budget Tracking Report</h3>
             <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-6">
               <div className="flex">
                 <div className="flex-shrink-0">
@@ -337,13 +337,13 @@ function Reporting() {
   
   return (
     <div className="container mx-auto">
-      <h1 className="text-2xl font-bold mb-6">Reporting</h1>
+      <h1 className="text-2xl text-gray-700 font-bold mb-6">Reporting</h1>
       
       <div className="bg-white p-6 rounded-lg shadow-md mb-8">
         <div className="flex flex-wrap">
           <button
             onClick={() => setSelectedReport('guestSummary')}
-            className={`mr-4 mb-4 px-4 py-2 rounded-md ${
+            className={`mr-4 mb-4 text-gray-700 px-4 py-2 rounded-md ${
               selectedReport === 'guestSummary' 
                 ? 'bg-blue-600 text-white' 
                 : 'bg-gray-200 text-gray-800 hover:bg-gray-300'
@@ -353,7 +353,7 @@ function Reporting() {
           </button>
           <button
             onClick={() => setSelectedReport('seatingArrangement')}
-            className={`mr-4 mb-4 px-4 py-2 rounded-md ${
+            className={`mr-4 mb-4 text-gray-700 px-4 py-2 rounded-md ${
               selectedReport === 'seatingArrangement' 
                 ? 'bg-blue-600 text-white' 
                 : 'bg-gray-200 text-gray-800 hover:bg-gray-300'
@@ -374,7 +374,7 @@ function Reporting() {
         </div>
       </div>
       
-      <div className="bg-white p-6 rounded-lg shadow-md mb-8">
+      <div className="bg-white p-6 text-gray-700 rounded-lg shadow-md mb-8">
         {renderReport()}
       </div>
       
@@ -387,7 +387,7 @@ function Reporting() {
             Export to CSV
           </div>
         </button>
-        <button className="bg-white border border-gray-300 hover:bg-gray-50 text-gray-700 font-medium py-2 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+        <button className="bg-white text-gray-700 border border-gray-300 hover:bg-gray-50 text-gray-700 font-medium py-2 px-4 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
           <div className="flex items-center">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />

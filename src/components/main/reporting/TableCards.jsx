@@ -126,13 +126,13 @@ function TableCards() {
   
   return (
     <div className="container mx-auto">
-      <h1 className="text-2xl font-bold mb-6">Table Cards</h1>
+      <h1 className="text-2xl text-gray-700 font-bold mb-6">Table Cards</h1>
       
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Settings Panel */}
         <div className="lg:col-span-1">
           <div className="bg-white p-6 rounded-lg shadow-md">
-            <h2 className="text-lg font-semibold mb-4">Table Card Settings</h2>
+            <h2 className="text-lg text-gray-700 font-semibold mb-4">Table Card Settings</h2>
             
             {error && (
               <div className="mb-4 bg-red-50 border-l-4 border-red-500 p-4">
@@ -156,7 +156,7 @@ function TableCards() {
                 </label>
                 <select
                   id="arrangement"
-                  className="w-full p-2 border rounded"
+                  className="w-full text-gray-700 p-2 border rounded"
                   value={selectedArrangement}
                   onChange={(e) => setSelectedArrangement(e.target.value)}
                   disabled={arrangements.length === 0}
@@ -182,7 +182,7 @@ function TableCards() {
                 </label>
                 <select
                   id="template"
-                  className="w-full p-2 border rounded"
+                  className="w-full text-gray-700 p-2 border rounded"
                   value={templateStyle}
                   onChange={(e) => setTemplateStyle(e.target.value)}
                 >
@@ -200,7 +200,7 @@ function TableCards() {
                 </label>
                 <select
                   id="cardSize"
-                  className="w-full p-2 border rounded"
+                  className="w-full p-2 text-gray-700 border rounded"
                   value={cardSize}
                   onChange={(e) => setCardSize(e.target.value)}
                 >
@@ -260,7 +260,7 @@ function TableCards() {
                   type="button"
                   onClick={handleGeneratePreview}
                   disabled={generating || !selectedArrangement}
-                  className={`flex-1 py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white ${
+                  className={`flex-1 py-2 px-4 border border-transparent text-gray-700 rounded-md shadow-sm text-sm font-medium text-white ${
                     generating || !selectedArrangement
                       ? 'bg-gray-300 cursor-not-allowed'
                       : 'bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500'
@@ -273,7 +273,7 @@ function TableCards() {
                   type="button"
                   onClick={handleGeneratePDF}
                   disabled={generating || !selectedArrangement}
-                  className={`flex-1 py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white ${
+                  className={`flex-1 py-2 px-4 border border-transparent text-gray-700 rounded-md shadow-sm text-sm font-medium text-white ${
                     generating || !selectedArrangement
                       ? 'bg-gray-300 cursor-not-allowed'
                       : 'bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500'
@@ -289,7 +289,7 @@ function TableCards() {
         {/* Preview Panel */}
         <div className="lg:col-span-2">
           <div className="bg-white p-6 rounded-lg shadow-md">
-            <h2 className="text-lg font-semibold mb-4">Preview</h2>
+            <h2 className="text-lg text-gray-700 font-semibold mb-4">Preview</h2>
             
             {!preview ? (
               <div className="border-2 border-dashed border-gray-300 rounded-lg p-12 text-center">
@@ -311,11 +311,11 @@ function TableCards() {
                 </div>
                 
                 <div>
-                  <h3 className="font-medium mb-2">Tables Included:</h3>
+                  <h3 className="font-medium text-gray-700 mb-2">Tables Included:</h3>
                   <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
                     {preview.tables.map(table => (
                       <div key={table.id} className="border rounded p-3">
-                        <p className="font-medium">{table.name}</p>
+                        <p className="font-medium text-gray-700">{table.name}</p>
                         <p className="text-sm text-gray-600">{table.guestCount} of {table.capacity} guests</p>
                       </div>
                     ))}
@@ -326,28 +326,28 @@ function TableCards() {
           </div>
           
           <div className="mt-6 bg-white p-6 rounded-lg shadow-md">
-            <h2 className="text-lg font-semibold mb-4">Tips for Table Cards</h2>
+            <h2 className="text-lg font-semibold text-gray-700 mb-4">Tips for Table Cards</h2>
             
             <ul className="space-y-2 text-sm text-gray-600">
-              <li className="flex items-start">
+              <li className="flex text-gray-700 items-start">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-blue-500 mr-2 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
                 <span>Print on thick cardstock (110lb or higher) for durability</span>
               </li>
-              <li className="flex items-start">
+              <li className="flex text-gray-700 items-start">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-blue-500 mr-2 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
                 <span>If using guest lists, consider privacy by only including first names</span>
               </li>
-              <li className="flex items-start">
+              <li className="flex text-gray-700 items-start">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-blue-500 mr-2 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
                 <span>Make table cards at least 5 inches tall so they're visible across the room</span>
               </li>
-              <li className="flex items-start">
+              <li className="flex text-gray-700 items-start">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-blue-500 mr-2 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                 </svg>
