@@ -606,7 +606,7 @@ function OptimizationRunner() {
                           )}
                         </div>
                         
-                        <div className="mt-4 flex justify-center">
+                        <div className="mt-4 text-gray-700   flex justify-center">
                           <button className="text-blue-600 text-sm flex items-center">
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" viewBox="0 0 20 20" fill="currentColor">
                               <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clipRule="evenodd" />
@@ -626,11 +626,11 @@ function OptimizationRunner() {
       
       {/* Explanation and Insights */}
       <div className="mt-6 bg-white p-6 rounded-lg shadow-md">
-        <h2 className="text-lg font-semibold mb-4">How It Works</h2>
+        <h2 className="text-lg font-semibold text-gray-700  mb-4">How It Works</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div>
-            <h3 className="font-medium mb-2">Data Analysis</h3>
+            <h3 className="font-medium text-gray-700  mb-2">Data Analysis</h3>
             <p className="text-sm text-gray-600">
               Our algorithm analyzes guest survey responses and relationship data to understand social dynamics.
               It considers factors like family connections, friendships, and potential conflicts.
@@ -638,7 +638,7 @@ function OptimizationRunner() {
           </div>
           
           <div>
-            <h3 className="font-medium mb-2">Constraint Satisfaction</h3>
+            <h3 className="font-medium text-gray-700  mb-2">Constraint Satisfaction</h3>
             <p className="text-sm text-gray-600">
               Using a graph-based model, we represent guests as nodes and their relationships as weighted edges.
               The algorithm applies your specified constraints to find optimal solutions that satisfy as many preferences as possible.
@@ -646,7 +646,7 @@ function OptimizationRunner() {
           </div>
           
           <div>
-            <h3 className="font-medium mb-2">Multiple Solutions</h3>
+            <h3 className="font-medium text-gray-700  mb-2">Multiple Solutions</h3>
             <p className="text-sm text-gray-600">
               Rather than providing a single answer, we generate multiple high-quality seating arrangements
               with different optimization focuses, allowing you to choose the approach that best fits your event.

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 function SurveyDashboard() {
-  // Mock data - in a real app this would come from your API
+  // Mock data 
   const [surveyData, setSurveyData] = useState({
     id: "survey-123",
     title: "Wedding Seating Arrangement Survey",
@@ -163,14 +163,14 @@ function SurveyDashboard() {
   };
 
   const sendReminders = () => {
-    // In a real app, this would make an API call to send reminders
+    // make an API call to send reminders
     alert(`Reminders sent to ${selectedGuests.length} guests!`);
     setShowRemindModal(false);
     setSelectedGuests([]);
   };
 
   const exportResponses = () => {
-    // In a real app, this would generate a CSV file for download
+    //generate a CSV file for download
     alert('Exporting survey responses as CSV...');
   };
 
@@ -206,7 +206,7 @@ function SurveyDashboard() {
 
   return (
     <div className="container mx-auto">
-      <h1 className="text-2xl font-bold mb-6">Survey Dashboard</h1>
+      <h1 className="text-2xl text-gray-500  font-bold mb-6">Survey Dashboard</h1>
       
       {/* Survey Overview */}
       <div className="bg-white p-6 rounded-lg shadow-md mb-6">
@@ -315,11 +315,11 @@ function SurveyDashboard() {
       {/* Selected View Content */}
       {selectedView === 'overview' && (
         <div className="bg-white p-6 rounded-lg shadow-md mb-6">
-          <h2 className="text-lg font-semibold mb-4">Response Summary</h2>
+          <h2 className="text-lg text-gray-700  font-semibold mb-4">Response Summary</h2>
           
           {surveyData.questions.slice(0, 5).map((question, index) => (
-            <div key={index} className="mb-6 pb-6 border-b border-gray-200 last:border-b-0 last:mb-0 last:pb-0">
-              <h3 className="font-medium mb-2">{question.question}</h3>
+            <div key={index} className="mb-6 pb-6 border-b text-gray-700 border-gray-200 last:border-b-0 last:mb-0 last:pb-0">
+              <h3 className="font-medium text-gray-700  mb-2">{question.question}</h3>
               {renderResponseBarChart(question.responses, surveyData.responseStats.totalResponses)}
             </div>
           ))}
@@ -329,7 +329,7 @@ function SurveyDashboard() {
       {selectedView === 'individual' && (
         <div className="bg-white p-6 rounded-lg shadow-md mb-6">
           <div className="flex justify-between items-center mb-4">
-            <h2 className="text-lg font-semibold">Individual Responses</h2>
+            <h2 className="text-lg text-gray-700 font-semibold">Individual Responses</h2>
             <div className="relative">
               <input
                 type="text"
@@ -530,7 +530,7 @@ function SurveyDashboard() {
               <button
                 className={`py-2 px-4 rounded ${
                   selectedGuests.length > 0 
-                    ? 'bg-blue-600 text-white hover:bg-blue-700' 
+                    ? 'bg-blue-600 text-gray-700  hover:bg-blue-700' 
                     : 'bg-gray-300 text-gray-500 cursor-not-allowed'
                 }`}
                 onClick={sendReminders}

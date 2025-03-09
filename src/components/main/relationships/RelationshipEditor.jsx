@@ -30,7 +30,7 @@ function RelationshipEditor() {
   const [aiSuggestion, setAiSuggestion] = useState('');
   const [processingAi, setProcessingAi] = useState(false);
   
-  // Mock event ID - in a real app, this would come from your context or route params
+  // Mock event ID 
   const eventId = 1;
   
   useEffect(() => {
@@ -282,7 +282,7 @@ function RelationshipEditor() {
       <h1 className="text-2xl font-bold mb-6">Relationship Editor</h1>
       
       {error && (
-        <div className="mb-6 bg-red-50 border-l-4 border-red-500 p-4">
+        <div className="mb-6 text-gray-700  bg-red-50 border-l-4 border-red-500 p-4">
           <div className="flex">
             <div className="flex-shrink-0">
               <svg className="h-5 w-5 text-red-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -297,7 +297,7 @@ function RelationshipEditor() {
       )}
       
       {successMessage && (
-        <div className="mb-6 bg-green-50 border-l-4 border-green-500 p-4">
+        <div className="mb-6 bg-green-50 text-gray-700  border-l-4 border-green-500 p-4">
           <div className="flex">
             <div className="flex-shrink-0">
               <svg className="h-5 w-5 text-green-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -313,7 +313,7 @@ function RelationshipEditor() {
       
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Guest Selection Panel */}
-        <div className="lg:col-span-1">
+        <div className="lg:col-span-1 text-gray-700">
           <div className="bg-white rounded-lg shadow-md p-6 mb-4">
             <div className="flex justify-between items-center mb-4">
               <h2 className="text-lg font-medium">Guests</h2>
@@ -321,7 +321,7 @@ function RelationshipEditor() {
                 <input
                   type="text"
                   placeholder="Search guests"
-                  className="pl-8 pr-3 py-2 text-sm border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
+                  className="pl-8 pr-3 py-2 text-sm border border-gray-300 text-gray-700  rounded-md focus:ring-blue-500 focus:border-blue-500"
                   value={guestSearch}
                   onChange={e => setGuestSearch(e.target.value)}
                 />
@@ -331,7 +331,7 @@ function RelationshipEditor() {
               </div>
             </div>
             
-            <div className="border rounded-md max-h-[450px] overflow-y-auto">
+            <div className="border text-gray-700  rounded-md max-h-[450px] overflow-y-auto">
               {filteredGuests.length > 0 ? (
                 <ul className="divide-y divide-gray-200">
                   {filteredGuests.map(guest => (

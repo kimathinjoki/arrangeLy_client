@@ -308,27 +308,27 @@ function RelationshipGraph() {
                 style={{ maxHeight: '600px' }}
               />
               
-              <div className="absolute bottom-4 right-4 bg-white bg-opacity-90 p-3 rounded-md shadow-sm">
-                <h3 className="text-sm font-semibold mb-2">Legend</h3>
+              <div className="absolute bottom-4 right-4  bg-white bg-opacity-90 p-3 rounded-md shadow-sm">
+                <h3 className="text-sm text-gray-700 font-semibold mb-2">Legend</h3>
                 <div className="flex flex-col space-y-1 text-xs">
                   <div className="flex items-center">
-                    <div className="w-3 h-3 bg-green-500 rounded-full mr-2"></div>
-                    <span>Family Relationship</span>
+                    <div className="w-3 h-3 text-gray-700  bg-green-500 rounded-full mr-2"></div>
+                    <span className='text-gray-700 '>Family Relationship</span>
                   </div>
                   <div className="flex items-center">
                     <div className="w-3 h-3 bg-blue-500 rounded-full mr-2"></div>
-                    <span>Friend Relationship</span>
+                    <span className='text-gray-700 ' >Friend Relationship</span>
                   </div>
                   <div className="flex items-center">
                     <div className="w-3 h-3 bg-gray-500 rounded-full mr-2"></div>
-                    <span>Other Relationship</span>
+                    <span className='text-gray-700 '>Other Relationship</span>
                   </div>
                   <div className="flex items-center">
                     <div className="w-3 h-3 bg-red-500 rounded-full mr-2"></div>
-                    <span>Conflict</span>
+                    <span className='text-gray-700 ' >Conflict</span>
                   </div>
                   <div className="mt-1 border-t pt-1">
-                    <span>Line thickness represents relationship strength</span>
+                    <span className='text-gray-700' >Line thickness represents relationship strength</span>
                   </div>
                 </div>
               </div>
@@ -352,13 +352,13 @@ function RelationshipGraph() {
         <div className="lg:col-span-1">
           {showEditor ? (
             <div className="bg-white p-6 rounded-lg shadow-md">
-              <h2 className="text-lg font-semibold mb-4">Add/Edit Relationship</h2>
+              <h2 className="text-lg text-gray-700 font-semibold mb-4">Add/Edit Relationship</h2>
               
               <form onSubmit={handleAddRelationship}>
                 <div className="mb-4">
                   <label className="block text-sm font-medium text-gray-700 mb-1">Person 1</label>
                   <select
-                    className="w-full p-2 border rounded"
+                    className="w-full p-2 text-gray-700  border rounded"
                     value={newRelationship.source}
                     onChange={(e) => setNewRelationship({...newRelationship, source: e.target.value})}
                     required
@@ -373,7 +373,7 @@ function RelationshipGraph() {
                 <div className="mb-4">
                   <label className="block text-sm font-medium text-gray-700 mb-1">Person 2</label>
                   <select
-                    className="w-full p-2 border rounded"
+                    className="w-full text-gray-700  p-2 border rounded"
                     value={newRelationship.target}
                     onChange={(e) => setNewRelationship({...newRelationship, target: e.target.value})}
                     required
@@ -386,9 +386,9 @@ function RelationshipGraph() {
                 </div>
                 
                 <div className="mb-4">
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Relationship Type</label>
+                  <label className="block text-sm font-medium  text-gray-700 mb-1">Relationship Type</label>
                   <select
-                    className="w-full p-2 border rounded"
+                    className="w-full p-2 text-gray-700  border rounded"
                     value={newRelationship.type}
                     onChange={(e) => setNewRelationship({...newRelationship, type: e.target.value})}
                   >
@@ -423,7 +423,7 @@ function RelationshipGraph() {
                 <div className="flex justify-end space-x-3">
                   <button
                     type="button"
-                    className="bg-gray-200 text-gray-800 py-2 px-4 rounded hover:bg-gray-300"
+                    className="bg-gray-600 text-gray-800 py-2 px-4 rounded hover:bg-gray-300"
                     onClick={() => setShowEditor(false)}
                   >
                     Cancel
@@ -442,7 +442,7 @@ function RelationshipGraph() {
               <h2 className="text-lg font-semibold mb-4">Relationship List</h2>
               
               {relationshipData.relationships.length > 0 ? (
-                <div className="space-y-2 max-h-96 overflow-y-auto">
+                <div className="space-y-2 text-gray-700 max-h-96 overflow-y-auto">
                   {relationshipData.relationships.map((rel, index) => (
                     <div key={index} className="flex justify-between items-center p-2 border rounded hover:bg-gray-50">
                       <span className="text-sm">{getRelationshipDescription(rel)}</span>

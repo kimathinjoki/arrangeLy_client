@@ -48,9 +48,9 @@ function ArrangementDetails() {
                     value="indoor"
                     checked={formData.venueType === 'indoor'}
                     onChange={handleInputChange}
-                    className="form-radio text-blue-600"
+                    className="form-radio text-blue-800"
                   />
-                  <span className="ml-2">Indoor</span>
+                  <span className="ml-2 text-gray-700 ">Indoor</span>
                 </label>
                 <label className="inline-flex items-center">
                   <input
@@ -59,18 +59,18 @@ function ArrangementDetails() {
                     value="outdoor"
                     checked={formData.venueType === 'outdoor'}
                     onChange={handleInputChange}
-                    className="form-radio text-blue-600"
+                    className="form-radio text-blue-800"
                   />
-                  <span className="ml-2">Outdoor</span>
+                  <span className="ml-2 text-gray-700">Outdoor</span>
                 </label>
-                <label className="inline-flex items-center">
+                <label className="inline-flex text-gray-700  items-center">
                   <input
                     type="radio"
                     name="venueType"
                     value="hybrid"
                     checked={formData.venueType === 'hybrid'}
                     onChange={handleInputChange}
-                    className="form-radio text-blue-600"
+                    className="form-radio text-blue-800"
                   />
                   <span className="ml-2">Hybrid</span>
                 </label>
@@ -251,7 +251,7 @@ function ArrangementDetails() {
       
       {/* Preview Section */}
       <div className="mt-8 bg-white p-6 rounded-lg shadow-md">
-        <h2 className="text-lg font-semibold mb-4">Layout Preview</h2>
+        <h2 className="text-lg text-gray-700  font-semibold mb-4">Layout Preview</h2>
         <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 flex flex-col items-center justify-center h-64">
           <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 text-gray-400 mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2" />

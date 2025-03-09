@@ -197,7 +197,7 @@ function GuestSurvey() {
   };
 
   const generateShareUrl = () => {
-    // In a real app, this would make an API call to save the survey and generate a unique URL
+    // API call to save the survey and generate a unique URL
     const dummyUrl = `https://arrange.ly/survey/${Math.random().toString(36).substring(2, 8)}`;
     setShareUrl(dummyUrl);
     setShowShareModal(true);
@@ -214,7 +214,7 @@ function GuestSurvey() {
 
   const renderQuestionEditor = (question) => {
     return (
-      <div key={question.id} className="bg-white p-4 mb-4 rounded-lg shadow-md">
+      <div key={question.id} className="bg-white text-gray-700  p-4 mb-4 rounded-lg shadow-md">
         <div className="flex justify-between items-start mb-3">
           <div className="flex-grow mr-4">
             <input
@@ -258,7 +258,7 @@ function GuestSurvey() {
         <div className="mb-3">
           <label className="block text-sm font-medium text-gray-700 mb-1">Question Type</label>
           <select 
-            className="w-full p-2 border rounded"
+            className="w-full text-gray-700  p-2 border rounded"
             value={question.type}
             onChange={(e) => updateQuestion(question.id, 'type', e.target.value)}
           >
@@ -355,7 +355,7 @@ function GuestSurvey() {
       
       case 'textarea':
         return (
-          <div key={question.id} className="mb-4">
+          <div key={question.id} className="text-gray-700 mb-4">
             <QuestionLabel />
             <textarea
               placeholder={question.placeholder}
@@ -369,7 +369,7 @@ function GuestSurvey() {
       
       case 'radio':
         return (
-          <div key={question.id} className="mb-4">
+          <div key={question.id} className="text-gray-700 mb-4">
             <QuestionLabel />
             <div className="space-y-2">
               {question.options.map((option, index) => (
@@ -432,7 +432,7 @@ function GuestSurvey() {
 
   return (
     <div className="container mx-auto">
-      <h1 className="text-2xl font-bold mb-6">Guest Survey Management</h1>
+      <h1 className="text-2xl text-gray-500  font-bold mb-6">Guest Survey Management</h1>
       
       {/* Survey Creation/Preview Tabs */}
       <div className="bg-white rounded-lg shadow-md overflow-hidden mb-6">
@@ -456,12 +456,12 @@ function GuestSurvey() {
         <div>
           {/* Survey Settings */}
           <div className="bg-white p-6 rounded-lg shadow-md mb-6">
-            <h2 className="text-lg font-semibold mb-4">Survey Details</h2>
+            <h2 className="text-lg text-gray-700 font-semibold mb-4">Survey Details</h2>
             <div className="mb-4">
               <label className="block text-sm font-medium text-gray-700 mb-1">Survey Title</label>
               <input
                 type="text"
-                className="w-full p-2 border rounded"
+                className="w-full text-gray-700  p-2 border rounded"
                 value={surveyConfig.title}
                 onChange={(e) => setSurveyConfig({ ...surveyConfig, title: e.target.value })}
               />
@@ -469,7 +469,7 @@ function GuestSurvey() {
             <div className="mb-4">
               <label className="block text-sm font-medium text-gray-700 mb-1">Survey Description</label>
               <textarea
-                className="w-full p-2 border rounded"
+                className="w-full text-gray-700  p-2 border rounded"
                 value={surveyConfig.description}
                 onChange={(e) => setSurveyConfig({ ...surveyConfig, description: e.target.value })}
                 rows="3"
@@ -480,7 +480,7 @@ function GuestSurvey() {
           {/* Question List */}
           <div className="bg-white p-6 rounded-lg shadow-md mb-6">
             <div className="flex justify-between items-center mb-4">
-              <h2 className="text-lg font-semibold">Survey Questions</h2>
+              <h2 className="text-lg text-gray-700  font-semibold">Survey Questions</h2>
               <div className="relative group">
                 <button className="bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700">
                   Add Question
@@ -562,7 +562,7 @@ function GuestSurvey() {
                     readOnly
                   />
                   <button
-                    className="bg-blue-600 text-white px-4 rounded-r hover:bg-blue-700"
+                    className="bg-blue-600 text-gray-700  px-4 rounded-r hover:bg-blue-700"
                     onClick={copyToClipboard}
                   >
                     Copy
